@@ -11,7 +11,8 @@ import { AuthService, User } from '../../auth/shared/services/auth/auth.service'
   styleUrls: ['app.component.scss'],
   template: `
     <div>
-      <h1>{{ user$ | async | json }}</h1>
+      <app-header></app-header>
+      <app-nav></app-nav>
       <div class="wrapper">
         <router-outlet></router-outlet>
       </div>
