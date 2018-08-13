@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { MealsService } from '../../../shared/services/meals/meals.service';
+
 @Component({
     selector: 'meals',
     styleUrls: ['meals.component.scss'],
@@ -10,5 +12,7 @@ import { Component } from '@angular/core';
     `
 })
 export class MealsComponent {
-    constructor() {}
+    constructor(
+        private mealsService: MealsService
+    ) {}
 }
