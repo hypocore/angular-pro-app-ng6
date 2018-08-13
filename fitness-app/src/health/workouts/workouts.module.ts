@@ -22,4 +22,4 @@ export const ROUTES: Routes = [
     ],
     providers: []
 })
-export class MealsModule {}
+export class WorkoutsModule {}
