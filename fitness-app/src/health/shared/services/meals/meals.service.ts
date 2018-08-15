@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 import { Store } from 'store';
 
-import { Observable, Subject, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { AuthService } from '../../../../auth/shared/services/auth/auth.service';
 import { tap, map, filter } from 'rxjs/operators';
 

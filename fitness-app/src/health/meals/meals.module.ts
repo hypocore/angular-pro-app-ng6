@@ -5,10 +5,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 
+// components
+import { MealFormComponent } from './components/meal-form/meal-form.component';
+
 // containers
 import { MealsComponent } from './containers/meals/meals.component';
 import { MealComponent } from './containers/meal/meal.component';
-import { MealFormComponent } from './components/meal-form/meal-form.component';
+
 
 export const ROUTES: Routes = [
     { path: '', component: MealsComponent },
