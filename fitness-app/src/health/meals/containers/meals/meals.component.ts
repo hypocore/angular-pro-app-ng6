@@ -20,25 +20,27 @@ import { Store } from 'store';
                     <img src="/assets/svg/add-white.svg">
                     New meal
                 </a>
-                <div *ngIf="meals$ | async as meals; else loading">
-                    <div class="message" *ngIf="!meals.length">
-                        <img src="/assets/svg/add-white.svg">
-                        No meals, add a new meal to start
-                    </div>
-                    <list-item 
-                        *ngFor="let meal of meals"
-                        [item]="meal"
-                        (remove)="removeMeal($event)">
-                    </list-item>
-                </div>
-                <ng-template #loading>
-                    <div class="message">
-                        <img src="/assets/svg/loading.svg">
-                        Fetching meals...
-                    </div>
-                </ng-template>
             </div>
+            <div *ngIf="meals$ | async as meals; else loading">
+                <div class="message" *ngIf="!meals.length">
+                    <img src="/assets/svg/add-white.svg">
+                    No meals, add a new meal to start
+                </div>
+                <list-item 
+                    *ngFor="let meal of meals"
+                    [item]="meal"
+                    (remove)="removeMeal($event)">
+                </list-item>
+            </div>
+            <ng-template #loading>
+                <div class="message">
+                    <img src="/assets/svg/loading.svg">
+                    Fetching meals...
+                </div>
+            </ng-template>
         </div>
+
+
     `
 })
 export class MealsComponent implements OnInit, OnDestroy{
