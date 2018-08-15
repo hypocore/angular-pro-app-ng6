@@ -22,6 +22,10 @@ import { withLatestFrom } from 'rxjs/operators';
                             Workout name is required
                         </div>
                     </label>
+                    <label>
+                        <h3>Type</h3>
+                        
+                    </label>
                 </div>
 
                 <div class="workout-form__submit">
@@ -96,6 +100,7 @@ export class WorkoutFormComponent {
 
     form = this.fb.group({
         name: ['', Validators.required],
+        type: 'strength',
     })
     constructor(
         private fb: FormBuilder
