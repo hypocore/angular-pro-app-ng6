@@ -69,20 +69,19 @@ import { withLatestFrom } from 'rxjs/operators';
                     </div>
 
                     <div class="meal-form__delete" *ngIf="exists">
-                        <div 
-                            *ngIf="toggled">
+                        <div *ngIf="toggled">
                             <p>Delete item?</p>
                             <button
                                 type="button"
                                 class="confirm"
-                                (click)="removeItem()">
-                                Yes
+                                (click)="removeMeal()">
+                            Yes
                             </button>
                             <button
                                 type="button"
                                 class="cancel"
                                 (click)="toggle()">
-                                No
+                            No
                             </button>
                         </div>
             
@@ -90,7 +89,7 @@ import { withLatestFrom } from 'rxjs/operators';
                             class="button button--delete"
                             type="button"
                             (click)="toggle()">
-                            Delete
+                        Delete
                         </button>
                     </div>
 
